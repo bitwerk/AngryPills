@@ -41,5 +41,7 @@ public class PlayerController : NetworkBehaviour{
 
     public override void OnStartLocalPlayer(){
         GetComponent<MeshRenderer>().material.color = Color.blue;
+
+        Camera.main.GetComponent<CameraFollow>().setTarget(gameObject.transform);
     }
 }
